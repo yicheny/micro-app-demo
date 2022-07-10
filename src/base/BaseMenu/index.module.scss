@@ -1,0 +1,15 @@
+.base{
+  position:fixed;
+  top:100px;
+  right:200px;
+  z-index: 99;
+  border-radius:50%;
+  background: rgba(0,191,255);
+  box-shadow: 12px 12px 28px rgba(0,191,255,0.24);
+  cursor:pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  user-select: none;
+}
