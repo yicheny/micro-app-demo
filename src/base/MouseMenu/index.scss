@@ -1,0 +1,58 @@
+.mouse_menu{
+  &_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    width:240px;
+    height:240px;
+    z-index: 99999;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:240px;
+  height:240px;
+  border-radius: 4px;
+  user-select: none;
+
+  animation: .45s rotateDis 1 ease-in;
+  overflow: hidden;
+  transform-origin: center center;
+
+  &_item{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background: aquamarine;
+    opacity: .72;
+    cursor: pointer;
+    box-shadow: 8px 8px 12px rgba(24,24,24,0.21),
+                -4px -4px 12px rgba(24,24,24,0.21);
+    color: #4f4f4f;
+    transition: 300ms opacity;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  //旋转放大
+  @keyframes rotateDis{
+    0%{
+      width:0;
+      height:0;
+      transform: rotate(0deg);
+    }
+
+    100%{
+      width:300px;
+      height:300px;
+      transform: rotate(720deg);
+    }
+  }
+}
