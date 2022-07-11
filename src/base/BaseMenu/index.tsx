@@ -12,7 +12,7 @@ interface Props extends CommonComponentProps {
 
 export function BaseMenu(props: Props) {
     const {style, size} = props;
-    const {setDragRef} = useDrag();
+    const {setDragRef} = useDrag<HTMLDivElement>();
 
     return <div className={styles.base}
                 style={_.assign({width: size, height: size}, style)}

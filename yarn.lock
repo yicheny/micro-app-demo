@@ -1491,6 +1491,11 @@
   resolved "https://registry.npmmirror.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@micro-zoe/micro-app@^0.8.7":
+  version "0.8.7"
+  resolved "http://nexus.croot.com:8081/repository/npm-public/@micro-zoe/micro-app/-/micro-app-0.8.7.tgz#837d926e42dad62d0ff3ef55e25f02bf250c8666"
+  integrity sha512-iD7J+8mXy3dvLX2jJ3Uz47yKJixsaOkuX4eGINabJ+EIqymI3geAKVkm3ARjYv/8rq3j75CnB8RSp8RRsOAK8g==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmmirror.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"

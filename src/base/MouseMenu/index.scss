@@ -29,12 +29,11 @@
     width:60px;
     height:60px;
     border-radius: 50%;
-    background: aquamarine;
+    color:white;
+    background: rgba(0,191,255);
+    box-shadow: 12px 12px 28px rgba(0,191,255,0.24);
     opacity: .72;
     cursor: pointer;
-    box-shadow: 8px 8px 12px rgba(24,24,24,0.21),
-                -4px -4px 12px rgba(24,24,24,0.21);
-    color: #4f4f4f;
     transition: 300ms opacity;
     &:hover{
       opacity: 1;

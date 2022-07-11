@@ -2,7 +2,7 @@ import React, {MutableRefObject, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import {curryCirclePosition} from "./curryCirclePosition";
-import {Nullable} from "../../../../../../2021/y-toys/src/types";
+import {Nullable} from "../../types";
 import _ from 'lodash'
 import {useDomRef} from "../../hooks";
 import {MENU_CONFIG} from "./config";

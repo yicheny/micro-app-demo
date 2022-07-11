@@ -5,8 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import './index.scss'
 import {registerMouseMenu} from "./base";
+import microApp from '@micro-zoe/micro-app'
 
 registerMouseMenu();
+microApp.start();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
