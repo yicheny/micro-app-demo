@@ -1,22 +1,24 @@
 import React, {MutableRefObject, useEffect} from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.scss';
 import {curryCirclePosition} from "./curryCirclePosition";
 import {Nullable} from "../../types";
 import _ from 'lodash'
 import {useDomRef} from "../../hooks";
-import {MENU_CONFIG} from "./config";
+import {MenuConfigItem, useMenuConfig} from "./config";
 
 const MENU_CLASS = 'mouse_menu_wrap'
 
 function MouseMenu() {
-    const getPosition = curryCirclePosition({boxW:240,boxH:240},MENU_CONFIG.length);
+    const menuConfig = useMenuConfig()
+    console.log('menuConfig',menuConfig)
+    const getPosition = curryCirclePosition({boxW:240,boxH:240},menuConfig.length);
     const {ref: boxRef, setRef} = useDomRef<HTMLDivElement>()
-    useBindEvent(boxRef)
+    useBindEvent(boxRef,menuConfig)
 
     return <div className="mouse_menu" ref={setRef}>
         {
-            _.map(MENU_CONFIG,(option, i) => {
+            _.map(menuConfig,(option, i) => {
                 return <div className="mouse_menu_item" key={i} style={getPosition(i)}>{option.title}</div>
             })
         }
@@ -51,7 +53,7 @@ class MouseMenuControl {
             const div = document.createElement('div');
             div.className = MENU_CLASS;
             document.body.appendChild(div);
-            ReactDOM.render(<MouseMenu/>, div);
+            ReactDOM.createRoot(div).render(<MouseMenu/>);
         }
     };
 
@@ -73,13 +75,13 @@ export function registerMouseMenu(){
 }
 
 
-function useBindEvent(boxRef:MutableRefObject<Nullable<HTMLDivElement>>){
+function useBindEvent(boxRef:MutableRefObject<Nullable<HTMLDivElement>>,menuConfig:MenuConfigItem[]){
     useEffect(()=>{
         const children = _.get(boxRef,'current.children',[]) as Array<HTMLElement>
         _.forEach(children,(el,i)=>{
             el.addEventListener('click',(e:MouseEvent)=>{
                 console.log(i,e)
-                const operation = _.get(MENU_CONFIG,`${i}.click`);
+                const operation = _.get(menuConfig,`${i}.click`);
                 if(_.isFunction(operation)) operation(e);
             });
         });
