@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start-vite": "vite --host",
-    "start": "react-scripts start",
+    "start": "set PORT=3121 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
