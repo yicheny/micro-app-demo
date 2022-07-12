@@ -26,6 +26,7 @@
   },
   "scripts": {
     "start-vite": "vite --host",
+    "start-vite:child-app1": "cd packages/child-app1 && yarn start-vite",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
