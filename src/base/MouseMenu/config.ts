@@ -1,6 +1,5 @@
 import {RenderElement} from "../../types";
 import {useMemo} from "react";
-import {useNavigate} from "react-router-dom";
 import {ROUTE} from "../../config";
 
 type Click = (e:MouseEvent) => void;
@@ -14,7 +13,18 @@ export function useMenuConfig():MenuConfigItem[]{
     return useMemo(()=>{
         return [
             {
-                title:'保留',
+                title:'基座',
+                click:(e)=>{
+                    jmp(ROUTE.base)
+                }
+            },
+            {
+                title:'child1',
+                click:(e)=>{
+                }
+            },
+            {
+                title:'child2',
                 click:(e)=>{
                 }
             },
@@ -37,13 +47,13 @@ export function useMenuConfig():MenuConfigItem[]{
                 }
             },
             {
-                title:'app-home',
+                title:'aHome',
                 click:(e)=>{
                     jmp(ROUTE.appHome)
                 }
             },
             {
-                title:'app-demo',
+                title:'aDemo',
                 click:(e)=>{
                     jmp(ROUTE.appDemo)
                 }

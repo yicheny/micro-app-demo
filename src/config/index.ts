@@ -1,4 +1,5 @@
 export enum ROUTE {
+    base='/base',
     react='/react',
     vue='/vue',
     uiDoc='/rootnet-ui-doc',
