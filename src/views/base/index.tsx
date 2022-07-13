@@ -1,6 +1,7 @@
 import React from 'react';
 import {Collapse} from "antd";
 import DockApp from "./dockApp";
+import {COMPONENTS, ROUTE} from "../../config";
 
 const { Panel } = Collapse;
 
@@ -10,6 +11,7 @@ export default function Base() {
             <DockApp/>
         </Panel>
         <Panel header="子应用1" key="2">
+            {COMPONENTS.child1}
         </Panel>
         <Panel header="子应用2" key="3">
         </Panel>
