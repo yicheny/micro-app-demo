@@ -65,5 +65,6 @@ export function useMenuConfig():MenuConfigItem[]{
 
 function jmp(path:string){
     window.history.pushState(null,path,path)
+    // window.dispatchEvent(new PopStateEvent('popstate', { state: null }))
     window.location.reload();
 }
