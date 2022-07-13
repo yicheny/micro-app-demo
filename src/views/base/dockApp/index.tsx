@@ -36,7 +36,7 @@ export default function DockApp() {
     const [data,setData] = useState<Result>({app:MICRO_APP_NAME.child1,data:''})
     return <>
         {/*@ts-ignore*/}
-        <FormRender form={form} schema={schema} onValuesChange={setData}/>
+        <FormRender form={form} schema={schema} onValuesChange={(value,values)=>setData(values)}/>
         <Button onClick={useDispatch(data)} type={'primary'} style={{marginLeft:48}}>发送数据</Button>
         <Button onClick={useGetData(data)} style={{marginLeft:16}}>获取数据</Button>
     </>

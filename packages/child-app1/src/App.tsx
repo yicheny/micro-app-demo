@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <Button theme='solid' type='primary' onClick={getBaseData}>获取基座数据</Button>
           <Input  onChange={setData} style={{width:180}}/>
           <Button theme='solid' type='primary' onClick={dispatchToBase}>发送数据给基座</Button>
-          <img src={logo} className="App-logo" alt="logo" />
       </header>
     </div>
   );

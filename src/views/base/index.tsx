@@ -1,7 +1,7 @@
 import React from 'react';
 import {Collapse} from "antd";
 import DockApp from "./dockApp";
-import {COMPONENTS, ROUTE} from "../../config";
+import {COMPONENTS} from "../../config";
 
 const { Panel } = Collapse;
 
