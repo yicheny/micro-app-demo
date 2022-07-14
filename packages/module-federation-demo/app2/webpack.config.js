@@ -32,6 +32,7 @@ module.exports = {
       exposes: {
         './App': './src/share/App',
         './App2': './src/share/App2',
+        './Counter': './src/share/Counter',
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),
