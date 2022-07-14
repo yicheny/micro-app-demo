@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from '../private/counter'
 
 export default function App(){
     return (
@@ -9,6 +10,7 @@ export default function App(){
             backgroundColor:"cyan"
         }}>
             <h1 >App 2</h1>
+            <Counter/>
         </div>
     )
 }

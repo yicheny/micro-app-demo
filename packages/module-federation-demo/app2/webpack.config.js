@@ -30,8 +30,8 @@ module.exports = {
       name: 'app2',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/components/App',
-        './App2': './src/components/App2',
+        './App': './src/share/App',
+        './App2': './src/share/App2',
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),
