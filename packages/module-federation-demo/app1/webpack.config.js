@@ -31,6 +31,7 @@ module.exports = {
       remotes: {
         // app2: "app2@[app2Url]/remoteEntry.js",
         app2: "app2@http://localhost:3202/remoteEntry.js",
+        app3: "app3@http://localhost:3203/remoteEntry.js",
       },
       shared: {react: {singleton: true}, "react-dom": {singleton: true}},
     }),

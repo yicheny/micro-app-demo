@@ -11,10 +11,12 @@
     "start": "lerna exec yarn start --parallel",
     "start:app1": "cd app1 && yarn start",
     "start:app2": "cd app2 && yarn start",
+    "start:app3": "cd app3 && yarn start",
     "build": "lerna run build",
-    "install:all": "yarn && yarn install:app2 && yarn install:app1",
+    "install:all": "yarn && yarn install:app2 && yarn install:app1 && yarn install:app3",
     "install:app1": "cd app1 && yarn",
-    "install:app2": "cd app2 && yarn"
+    "install:app2": "cd app2 && yarn",
+    "install:app3": "cd app3 && yarn"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
