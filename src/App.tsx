@@ -11,6 +11,7 @@ function App() {
     <Route path={ROUTE.appHome} element={COMPONENTS.appHome}/>
     <Route path={ROUTE.appDemo} element={COMPONENTS.appDemo}/>
     <Route path={ROUTE.child1} element={COMPONENTS.child1}/>
+    <Route path={ROUTE.child2} element={COMPONENTS.child2}/>
   </Routes>
 }
 

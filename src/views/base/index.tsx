@@ -14,6 +14,7 @@ export default function Base() {
             {COMPONENTS.child1}
         </Panel>
         <Panel header="子应用2" key="3">
+            {COMPONENTS.child2}
         </Panel>
     </Collapse>
 }

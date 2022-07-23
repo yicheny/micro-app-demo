@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Suspense} from "react";
 const RemoteCounter = React.lazy(() => import("app2/Counter"));
 
 export default function App(){
@@ -10,7 +10,9 @@ export default function App(){
             backgroundColor:"lightpink"
         }}>
             <h1 >App 3</h1>
-            <RemoteCounter defaultValue={3} onChange={(v)=>alert(`变化后的值是${v}`)}/>
+            <Suspense fallback={"loading..."}>
+                <RemoteCounter defaultValue={3} onChange={(v)=>alert(`变化后的值是${v}`)}/>
+            </Suspense>
         </div>
     )
 }

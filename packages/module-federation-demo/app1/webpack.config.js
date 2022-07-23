@@ -9,6 +9,9 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, "dist"),
     port: 3201,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    }
   },
   output: {
     publicPath: "auto",

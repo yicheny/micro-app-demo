@@ -27,6 +27,7 @@ export function useMenuConfig():MenuConfigItem[]{
             {
                 title:'child2',
                 click:(e)=>{
+                    jmp(ROUTE.child2)
                 }
             },
             {

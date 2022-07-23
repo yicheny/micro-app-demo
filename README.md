@@ -1,8 +1,8 @@
 微服务Demo--基座应用
 
 # 相关库
-- 基座框架：`react17` 
-- 路由：`react-router-dom6` 
+- 基座框架：`react17`
+- 路由：`react-router-dom6`
 - 组件库： `antd` 需要额外配置，如果重新做我会选择`semi-ui`这一类库做演示，因为不用配置比较方便（简单说一下，这两个现在都是使用`babel-import-plugin`实现的自动按需加载，这不是问题，主要在于`antd`使用了`less`会导致编译异常，需要额外下载`less`包以及配置`vite.config.ts`，比较麻烦）
 - 构建工具：`vite`
 
@@ -21,8 +21,17 @@
 3. [ ] 数据通信
    1. [x] 主应用 => 子应用
    2. [x] 子应用 => 主应用
-   3. [ ] 子应用 <=> 子应用
+   3. [ ] 子应用 <=> 子应用：官方不推荐这种做法
 4. [ ] 子应用使用公共模块
+   1. [x] 运行`Module Federation`实例
+   2. [ ] 将MF实例应用做为子应用引入基座
+   3. [x] 在子应用中引入远程模块
+      1. `webpack`版本必须在`5`以上
+      2. 需要修改`webpack`配置
+      3. 动态引入
+
+## 数据通信
+详见 官方文档 [数据通信](https://cangdu.org/micro-app/docs.html#/zh-cn/data)
 
 # `Module Federation`
 ## 功能点
@@ -37,6 +46,3 @@
 3. [x] 与远程组件交互（把远程组件当成普通的React组件使用就行）
    1. [x] 传值给远端组件
    2. [x] 接收远端组件的数据
-
-## 数据通信
-详见 官方文档 [数据通信](https://cangdu.org/micro-app/docs.html#/zh-cn/data)
