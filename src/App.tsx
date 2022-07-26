@@ -4,6 +4,7 @@ import {ROUTE,COMPONENTS} from "./config";
 
 function App() {
   return <Routes>
+    <Route path={'/'} element={COMPONENTS.base}/>
     <Route path={ROUTE.base} element={COMPONENTS.base}/>
     <Route path={ROUTE.react} element={COMPONENTS.react}/>
     <Route path={ROUTE.vue} element={COMPONENTS.vue}/>

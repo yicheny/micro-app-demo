@@ -1,11 +1,11 @@
 const {override} = require("customize-cra");
-const {ModuleFederationPlugin} = require("webpack").container;
-const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
+// const {ModuleFederationPlugin} = require("webpack").container;
+// const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
 
 module.exports = override((config)=>{
     const currentPlugins = [
         // new ModuleFederationPlugin({
-        //     name: "child-app1",
+        //     name: "base-app",
         //     remotes: {
         //         // app2: "app2@[app2Url]/remoteEntry.js",
         //         app2: "app2@http://localhost:3202/remoteEntry.js",

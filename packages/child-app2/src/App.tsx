@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, Suspense} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Button, Input, Toast} from '@douyinfe/semi-ui';
+// @ts-ignore
+const RemoteApp2 = React.lazy(() => import("app2/App"));
 
 // @ts-ignore
 const microApp = window.microApp
@@ -17,6 +19,9 @@ function App() {
                 <Input onChange={setData} style={{width: 180}}/>
                 <Button theme='solid' type='primary' onClick={dispatchToBase}>发送数据给基座</Button>
             </header>
+            <Suspense fallback={"loading..."}>
+                <RemoteApp2/>
+            </Suspense>
         </div>
     );
 

@@ -1,5 +1,5 @@
 {
-  "name": "child-app1",
+  "name": "child-app2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "set PORT=3121 && react-app-rewired start",
+    "start": "set PORT=3122 && react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

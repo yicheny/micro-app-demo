@@ -25,13 +25,17 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "start": "set PORT=3021 && react-app-rewired start",
     "start-vite": "vite --host",
+    "start:mf-app1": "cd packages/module-federation-demo && yarn start:app1",
+    "start:mf-app2": "cd packages/module-federation-demo && yarn start:app2",
+    "start:mf-app3": "cd packages/module-federation-demo && yarn start:app3",
     "start:child-app1": "cd packages/child-app1 && yarn start",
+    "start:child-app2": "cd packages/child-app2 && yarn start",
     "install:main": "yarn",
     "install:child-app1": "cd packages/child-app1 && yarn",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,6 +58,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.3.2",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1",
     "vite": "^2.9.14"
   }
 }

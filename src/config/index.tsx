@@ -25,7 +25,7 @@ export const COMPONENTS = {
     appHome:<micro-app name='micro-app-home' url='https://micro-zoe.github.io/micro-app/'/>,
     appDemo:<micro-app name='micro-app-demo' url='https://zeroing.jd.com/micro-app/demo/react16'/>,
     child1:<micro-app name={MICRO_APP_NAME.child1} url='http://localhost:3121/' onDataChange={curryHandleDataChange(MICRO_APP_NAME.child1)}/>,
-    child2:<micro-app name={MICRO_APP_NAME.child2} url='http://localhost:3201/' onDataChange={curryHandleDataChange(MICRO_APP_NAME.child2)}/>,
+    child2:<micro-app name={MICRO_APP_NAME.child2} url='http://localhost:3122/' onDataChange={curryHandleDataChange(MICRO_APP_NAME.child2)}/>,
 }
 
 function curryHandleDataChange(app:MICRO_APP_NAME){
