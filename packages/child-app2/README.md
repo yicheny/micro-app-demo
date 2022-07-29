@@ -2,4 +2,4 @@
 - 框架 `react17`
 - 组件库 `semi`
 - 构建工具 `webpack5`
-- 使用MF模块
+- 引入MF模块
