@@ -15,7 +15,11 @@
 - 基座框架：`react17`
 - 路由：`react-router-dom6`
 - 组件库： `antd` 需要额外配置，如果重新做我会选择`semi-ui`这一类库做演示，因为不用配置比较方便（简单说一下，这两个现在都是使用`babel-import-plugin`实现的自动按需加载，这不是问题，主要在于`antd`使用了`less`会导致编译异常，需要额外下载`less`包以及配置`vite.config.ts`，比较麻烦）
-- 构建工具：`vite` & `webpack`【任选】
+- 构建工具：`webpack`
+  - 虽然这里配置了`Vite`，但是别用，因为Vite不兼容Webpack的MF特性，Vite有自己的MF插件系统
+  - 如果基座和子应用都是用`Vite`呢？有两个问题
+    - micro-app中，如果父子都是用`Vite`则会出错，虽然可以解决，但是很麻烦，而且会失去虚拟沙盒等重要特性
+    - 业务项目都是`Webpack`，改成`Vite`有额外的迁移成本，目前没有这个必要
 
 # `micro-app`
 ## 构建思路
