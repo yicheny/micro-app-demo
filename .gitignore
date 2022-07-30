@@ -26,3 +26,5 @@ yarn-error.log*
 # 编辑器
 /.idea/
 
+#目录
+/ppts/

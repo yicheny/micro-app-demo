@@ -35,6 +35,9 @@
     "start:mf-app3": "cd packages/module-federation-demo && yarn start:app3",
     "install:main": "yarn",
     "install:child-app1": "cd packages/child-app1 && yarn",
+    "install:child-app2": "cd packages/child-app2 && yarn",
+    "install:child-app3": "cd packages/child-app3 && yarn",
+    "install:mf-all": "cd packages/module-federation-demo && yarn install:all",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"

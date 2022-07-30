@@ -1,9 +1,10 @@
 import './public-path'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './bootstrap.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+import './bootstrap.css';
+import 'rootnet-ui/lib/style.css'
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

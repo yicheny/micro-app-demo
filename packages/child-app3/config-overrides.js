@@ -10,6 +10,7 @@ module.exports = override((config)=>{
             filename: 'remoteEntry.js',
             exposes: {
                 './Test': './src/share/components/Test.tsx',
+                './Button': './src/share/components/RootnetUI.js',
             },
             shared: {react: {singleton: true, eager: true}, "react-dom": {singleton: true, eager: true}},
         }),

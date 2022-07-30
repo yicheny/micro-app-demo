@@ -1,3 +1,5 @@
+[TOC]
+
 ## 1. `Initialization of sharing external failed: ScriptExternalLoadError: Loading script failed.`
 换了服务地址后，需要同步修改`remotes`的服务地址
 
@@ -43,3 +45,5 @@ Visit https://reactjs.org/link/error-boundaries to learn more about error bounda
 ```html
 <script src="http://localhost:3123/remoteEntry.js"/></script>
 ```
+
+资料：[Webpack module federation is not working with eager shared libs](https://stackoverflow.com/questions/66123283/webpack-module-federation-is-not-working-with-eager-shared-libs)
