@@ -1,6 +1,9 @@
 import React from 'react';
 
-export default function Test() {
-    return <div>child-app 3</div>
+interface Props{
+    children?:React.ReactNode
+}
+export default function Test(props:Props) {
+    return <div>{props.children}</div>
 }
 

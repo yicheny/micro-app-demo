@@ -9,8 +9,9 @@ module.exports = override((config)=>{
             name: "childApp3",
             filename: 'remoteEntry.js',
             exposes: {
-                './Test': './src/share/components/Test.tsx',
-                './Button': './src/share/components/RootnetUI.js',
+                './components/Test': './src/share/components/Test.tsx',
+                './components/Counter': './src/share/components/Counter.js',
+                './utils/add':'./src/share/utils/add.js'
             },
             shared: {react: {singleton: true, eager: true}, "react-dom": {singleton: true, eager: true}},
         }),

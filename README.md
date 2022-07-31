@@ -19,7 +19,7 @@
    
 # 项目介绍
 ## 相关库
-- 基座框架：`react17`
+- 基座框架：`react18`
 - 路由：`react-router-dom6`
 - 组件库： `antd` 需要额外配置，如果重新做我会选择`semi-ui`这一类库做演示，因为不用配置比较方便（简单说一下，这两个现在都是使用`babel-import-plugin`实现的自动按需加载，这不是问题，主要在于`antd`使用了`less`会导致编译异常，需要额外下载`less`包以及配置`vite.config.ts`，比较麻烦）
 - 构建工具：`webpack`

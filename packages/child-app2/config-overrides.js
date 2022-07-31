@@ -7,7 +7,7 @@ module.exports = override((config)=>{
         new ModuleFederationPlugin({
             name: "child-app2",
             remotes: {
-                app2: "app2@http://localhost:3202/remoteEntry.js",
+                // app2: "app2@http://localhost:3202/remoteEntry.js",
                 childApp3: 'childApp3@http://localhost:3123/remoteEntry.js',
             },
             shared: {react: {singleton: true, eager: true}, "react-dom": {singleton: true, eager: true}},

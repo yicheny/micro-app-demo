@@ -1,10 +1,14 @@
 import Test from "./share/components/Test";
 import styls from './App.module.scss';
-import RootnetUi from "./share/components/RootnetUI";
+import Counter from "./share/components/Counter";
+import {useEffect} from "react";
 
 export default function App(){
+    useEffect(()=>{
+        console.log('app3')
+    },[])
     return <div className={styls.entry}>
-        <Test/>
-        <RootnetUi/>
+        <Test>ChildApp3 Test组件</Test>
+        <Counter/>
     </div>
 }
