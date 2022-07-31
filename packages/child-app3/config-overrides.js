@@ -11,7 +11,8 @@ module.exports = override((config)=>{
             exposes: {
                 './components/Test': './src/share/components/Test.tsx',
                 './components/Counter': './src/share/components/Counter.js',
-                './utils/add':'./src/share/utils/add.js'
+                './utils/add':'./src/share/utils/add.js',
+                './hooks/useTest':'./src/share/hooks/useTest.js'
             },
             shared: {react: {singleton: true, eager: true}, "react-dom": {singleton: true, eager: true}},
         }),
