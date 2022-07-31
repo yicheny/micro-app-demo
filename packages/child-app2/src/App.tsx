@@ -11,7 +11,6 @@ const RemoteCA3Test = React.lazy(() => import("childApp3/components/Test"));
 const RemoteCA3Counter = React.lazy(() => import('childApp3/components/Counter'));
 
 export default function App() {
-    console.log('useTest',useTest)
     const [value,setValue] = useTest(10)
 
     useEffect(()=>{
