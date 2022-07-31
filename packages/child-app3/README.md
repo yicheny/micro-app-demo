@@ -15,7 +15,7 @@ import add from 'remoteApp/add';
 ```
 
 # MF模块
-1. 基础
+1. [x] 基础
    1. [x] 导出`tsx`
    2. [x] 导出`js`
 2. [x] 组件

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom'
-import {ROUTE,COMPONENTS} from "./config";
+import {ROUTE, COMPONENTS} from "./config";
 
 function App() {
   return <Routes>

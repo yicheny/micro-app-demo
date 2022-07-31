@@ -16,5 +16,8 @@ module.exports = override((config)=>{
         // new ExternalTemplateRemotesPlugin(),
     ]
     config.plugins  = currentPlugins.concat(config.plugins)
+    // config.experiments = {
+    //     lazyCompilation: true,
+    // }
     return config
 });
