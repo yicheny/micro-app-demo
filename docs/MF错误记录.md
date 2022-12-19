@@ -35,7 +35,7 @@ The above error occurred in one of your React components:
     at Lazy
     at Suspense
     at div
-    at Index
+    at App
 
 Consider adding an error boundary to your tree to customize error handling behavior.
 Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
