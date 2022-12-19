@@ -11,7 +11,7 @@ const MENU_CLASS = 'mouse_menu_wrap'
 
 function MouseMenu() {
     const menuConfig = useMenuConfig()
-    console.log('menuConfig',menuConfig)
+    // console.log('menuConfig',menuConfig)
     const getPosition = curryCirclePosition({boxW:240,boxH:240},menuConfig.length);
     const {ref: boxRef, setRef} = useDomRef<HTMLDivElement>()
     useBindEvent(boxRef,menuConfig)
@@ -80,7 +80,7 @@ function useBindEvent(boxRef:MutableRefObject<Nullable<HTMLDivElement>>,menuConf
         const children = _.get(boxRef,'current.children',[]) as Array<HTMLElement>
         _.forEach(children,(el,i)=>{
             el.addEventListener('click',(e:MouseEvent)=>{
-                console.log(i,e)
+                // console.log(i,e)
                 const operation = _.get(menuConfig,`${i}.click`);
                 if(_.isFunction(operation)) operation(e);
             });

@@ -14,7 +14,7 @@ export enum ROUTE {
     appHome='/micro-app-home',
     appDemo='/micro-app-demo',
     child1='/child-app1',
-    child2='/child-app2',
+    child2='',
 }
 
 export const COMPONENTS = {
@@ -24,9 +24,39 @@ export const COMPONENTS = {
     uiDoc:<micro-app name='rootnet-ui-doc' url='http://192.168.9.151:3050/#/'/>,
     appHome:<micro-app name='micro-app-home' url='https://micro-zoe.github.io/micro-app/'/>,
     appDemo:<micro-app name='micro-app-demo' url='https://zeroing.jd.com/micro-app/demo/react16'/>,
-    child1:<micro-app name={MICRO_APP_NAME.child1} url='http://localhost:3121/' onDataChange={curryHandleDataChange(MICRO_APP_NAME.child1)}/>,
-    child2:<micro-app name={MICRO_APP_NAME.child2} url='http://localhost:3122/' onDataChange={curryHandleDataChange(MICRO_APP_NAME.child2)}/>,
+    child1:<micro-app name={MICRO_APP_NAME.child1} url='http://localhost:3121/#/' baseroute={'/child-app1'} onDataChange={curryHandleDataChange(MICRO_APP_NAME.child1)}/>,
+    child2:<micro-app name={MICRO_APP_NAME.child2} url='http://localhost:3122/#/' baseroute={'/child-app2'} onDataChange={curryHandleDataChange(MICRO_APP_NAME.child2)}/>,
 }
+
+export const MENU_CONFIG = [
+    // {
+    //     title:"base",
+    //     config:[
+    //         {title:'菜单1',path:'/m1'},
+    //         {title:'菜单2',path:'/m2'},
+    //     ]
+    // },
+    {
+        title:"child-app1",
+        baseUrl:"/child-app1",
+        config:[
+            {title:'菜单1',path:'/m1'},
+            {title:'菜单2',path:'/m2'},
+            {title:'菜单3',path:'/m3'},
+            {title:'菜单4',path:'/m4'},
+        ]
+    },
+    {
+        title:"child-app2",
+        baseUrl:"/child-app2",
+        config:[
+            {title:'菜单1',path:'/m1'},
+            {title:'菜单2',path:'/m2'},
+            {title:'菜单3',path:'/m3'},
+            {title:'菜单4',path:'/m4'},
+        ]
+    }
+]
 
 function curryHandleDataChange(app:MICRO_APP_NAME){
     return (e:any)=>{

@@ -1,20 +1,22 @@
-import React, {Suspense} from 'react';
-import styles from './App.module.scss';
+import React from 'react';
+import {Route, Routes} from 'react-router-dom'
 
-// @ts-ignore
-const RemoteCA3Test = React.lazy(() => import("childApp3/Test"));
-// @ts-ignore
-const RemoteCA3Button = React.lazy(() => import('childApp3/Button'));
-
-// console.log(RemoteCA3Test)
-function App() {
-    return <div className={styles.app}>
-        <Suspense fallback={'loading...'}>
-            {/*<RemoteApp2/>*/}
-            <RemoteCA3Test/>
-            <RemoteCA3Button/>
-        </Suspense>
-    </div>
+export default  function App() {
+    return <Routes>
+        <Route path={'/'} element={<Render title={'base'}/>}/>
+        <Route path={'/m1'} element={<Render title={'m1'}/>}/>
+        <Route path={'/m2'} element={<Render title={'m2'}/>}/>
+        <Route path={'/m3'} element={<Render title={'m3'}/>}/>
+        <Route path={'/m4'} element={<Render title={'m4'}/>}/>
+    </Routes>
 }
 
-export default App;
+interface RenderProps{
+    title:string
+}
+function Render(props:RenderProps){
+    return <h3>
+        child-app2: {props.title}
+    </h3>
+}
+

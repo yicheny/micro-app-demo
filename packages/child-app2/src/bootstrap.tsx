@@ -5,13 +5,18 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import './bootstrap.css';
 import 'rootnet-ui/lib/style.css'
+import {HashRouter} from "react-router-dom";
+import {getMicroBaseRoute} from "./about-micro-app/utils";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+console.log('app2 getMicroBaseRoute()',getMicroBaseRoute())
 root.render(
     <React.StrictMode>
-        <App />
+        <HashRouter basename={getMicroBaseRoute() || '/'}>
+            <App />
+        </HashRouter>
     </React.StrictMode>
 );
 

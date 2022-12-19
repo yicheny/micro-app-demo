@@ -1,0 +1,18 @@
+.c-menu{
+  max-height: 360px;
+  overflow: auto;
+
+  &-app{
+    border:1px solid rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.12);
+    margin:12px 18px;
+    border-radius: 5px;
+    padding:8px 12px;
+  }
+
+  &-item{
+    color:#1890ff;
+    cursor:pointer;
+    margin:6px 8px;
+  }
+}

@@ -4,13 +4,18 @@ import ReactDOM from 'react-dom/client';
 import './bootstrap.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
+import {HashRouter} from "react-router-dom";
+import {getMicroBaseRoute} from "./about-micro-app/utils";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+console.log('app1 getMicroBaseRoute()',getMicroBaseRoute())
 root.render(
     <React.StrictMode>
-        <App />
+        <HashRouter basename={getMicroBaseRoute() || '/'}>
+            <App />
+        </HashRouter>
     </React.StrictMode>
 );
 

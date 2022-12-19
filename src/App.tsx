@@ -1,19 +1,33 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {ROUTE,COMPONENTS} from "./config";
+import {useManagerChildApp} from "./aboutMicro/useManagerChildApp";
 
-function App() {
-  return <Routes>
-    <Route path={'/'} element={COMPONENTS.base}/>
-    <Route path={ROUTE.base} element={COMPONENTS.base}/>
-    <Route path={ROUTE.react} element={COMPONENTS.react}/>
-    <Route path={ROUTE.vue} element={COMPONENTS.vue}/>
-    <Route path={ROUTE.uiDoc} element={COMPONENTS.uiDoc}/>
-    <Route path={ROUTE.appHome} element={COMPONENTS.appHome}/>
-    <Route path={ROUTE.appDemo} element={COMPONENTS.appDemo}/>
-    <Route path={ROUTE.child1} element={COMPONENTS.child1}/>
-    <Route path={ROUTE.child2} element={COMPONENTS.child2}/>
-  </Routes>
+export default function App() {
+
+  useManagerChildApp();
+
+  return <Switch>
+    <Route path={ROUTE.base} children={COMPONENTS.base}/>
+    <Route path={ROUTE.react} children={COMPONENTS.react}/>
+    <Route path={ROUTE.vue} children={COMPONENTS.vue}/>
+    <Route path={ROUTE.uiDoc} children={COMPONENTS.uiDoc}/>
+    <Route path={ROUTE.appHome} children={COMPONENTS.appHome}/>
+    <Route path={ROUTE.appDemo} children={COMPONENTS.appDemo}/>
+    <Route path={ROUTE.child1} children={COMPONENTS.child1}/>
+    <Route path={ROUTE.child2} children={COMPONENTS.child2}/>
+
+    {/*<Route path={'/m1'} children={<Render title={'base:m1'}/>}/>*/}
+    {/*<Route path={'/m2'} children={<Render title={'base:m2'}/>}/>*/}
+    {/*<Route path={'/'} children={COMPONENTS.base}/>*/}
+  </Switch>
 }
 
-export default App;
+interface RenderProps{
+  title:string
+}
+function Render(props:RenderProps){
+  return <h3>
+    {props.title}
+  </h3>
+}

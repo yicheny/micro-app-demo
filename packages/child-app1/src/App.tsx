@@ -1,38 +1,21 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Button, Input, Toast} from '@douyinfe/semi-ui';
+import React from 'react';
+import {Route, Routes} from 'react-router-dom'
 
-// @ts-ignore
-const microApp = window.microApp
-
-function App() {
-    const [data, setData] = useState('');
-
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <Button theme='solid' type='primary' onClick={getBaseData}>获取基座数据</Button>
-                <Input onChange={setData} style={{width: 180}}/>
-                <Button theme='solid' type='primary' onClick={dispatchToBase}>发送数据给基座</Button>
-            </header>
-        </div>
-    );
-
-    function dispatchToBase() {
-        if (!microApp) return Toast.warning('没有获取到microApp！')
-        if (!data) return Toast.warning('子应用1：请输入数据！')
-        microApp.dispatch({data})
-        Toast.info(`子应用1发送数据 ${data} 给基座！`)
-    }
-
-    function getBaseData() {
-        if (!microApp) return Toast.warning('没有获取到microApp！')
-        const {data} = microApp.getData() || {}
-        if (!data) return Toast.warning('获取数据为空！')
-        Toast.info(`子应用1获取数据：${data}`)
-    }
+export default  function App() {
+    return <Routes>
+        <Route path={'/'} element={<Render title={'base'}/>}/>
+        <Route path={'/m1'} element={<Render title={'m1'}/>}/>
+        <Route path={'/m2'} element={<Render title={'m2'}/>}/>
+        <Route path={'/m3'} element={<Render title={'m3'}/>}/>
+        <Route path={'/m4'} element={<Render title={'m4'}/>}/>
+    </Routes>
 }
 
-export default App;
+interface RenderProps{
+    title:string
+}
+function Render(props:RenderProps){
+    return <h3>
+        child-app1: {props.title}
+    </h3>
+}
