@@ -8,6 +8,12 @@ import 'rootnet-ui/lib/style.css'
 import {HashRouter} from "react-router-dom";
 import {getMicroBaseRoute} from "./about-micro-app/utils";
 
+// // @ts-ignore
+// window.microApp.addDataListener(({pushState}) => {
+//     console.log('app2 pushState',pushState)
+//     pushState()
+// })
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );

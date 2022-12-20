@@ -7,6 +7,12 @@ import App from './App';
 import {HashRouter} from "react-router-dom";
 import {getMicroBaseRoute} from "./about-micro-app/utils";
 
+// // @ts-ignore
+// window.microApp.addDataListener(({pushState}) => {
+//     console.log('app1 pushState',pushState)
+//     pushState()
+// })
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
@@ -23,3 +29,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+

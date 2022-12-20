@@ -8,3 +8,4 @@ export function getMicroBaseRoute() {
     return window.__MICRO_APP_BASE_ROUTE__
     // return '/child-app1'
 }
+

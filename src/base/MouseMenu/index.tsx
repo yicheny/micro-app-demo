@@ -1,5 +1,5 @@
 import React, {MutableRefObject, useEffect} from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.scss';
 import {curryCirclePosition} from "./curryCirclePosition";
 import {Nullable} from "../../types";
@@ -53,7 +53,7 @@ class MouseMenuControl {
             const div = document.createElement('div');
             div.className = MENU_CLASS;
             document.body.appendChild(div);
-            ReactDOM.createRoot(div).render(<MouseMenu/>);
+            ReactDOM.render(<MouseMenu/>,div);
         }
     };
 

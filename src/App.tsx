@@ -5,7 +5,7 @@ import {useManagerChildApp} from "./aboutMicro/useManagerChildApp";
 
 export default function App() {
 
-  useManagerChildApp();
+  // useManagerChildApp();
 
   return <Switch>
     <Route path={ROUTE.base} children={COMPONENTS.base}/>
@@ -17,8 +17,10 @@ export default function App() {
     <Route path={ROUTE.child1} children={COMPONENTS.child1}/>
     <Route path={ROUTE.child2} children={COMPONENTS.child2}/>
 
-    {/*<Route path={'/m1'} children={<Render title={'base:m1'}/>}/>*/}
-    {/*<Route path={'/m2'} children={<Render title={'base:m2'}/>}/>*/}
+    <Route path={'/m1'} children={<Render title={'m1'}/>}/>
+    <Route path={'/m2'} children={<Render title={'m2'}/>}/>
+    <Route path={'/m3'} children={<Render title={'m3'}/>}/>
+    <Route path={'/m4'} children={<Render title={'m4'}/>}/>
     {/*<Route path={'/'} children={COMPONENTS.base}/>*/}
   </Switch>
 }
@@ -28,6 +30,6 @@ interface RenderProps{
 }
 function Render(props:RenderProps){
   return <h3>
-    {props.title}
+    base:{props.title}
   </h3>
 }
